@@ -49,7 +49,7 @@ public extension UIDevice {
             case "AppleTV5,3":                              return "Apple TV"
             case "AppleTV6,2":                              return "Apple TV 4K"
             case "AudioAccessory1,1":                       return "HomePod"
-            case "i386", "x86_64":                          return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
+            case "i386", "x86_64":                          return "\(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
             default:                                        return identifier
             }
             #elseif os(tvOS)
